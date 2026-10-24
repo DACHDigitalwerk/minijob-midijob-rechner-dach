@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minijob-midijob-rechner-dach"
+version = "1.0.0"
+description = "DACH Minijob-, Midijob- & Übergangsbereich-Rechner 2026 (556-€-Grenze, Gleitzone § 20 SGB IV, DE / AT / CH)"
+readme = "README.md"
+authors = [{ name = "DACH Digitalwerk", email = "dach.digitalwerk@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+dach-midijob = "minijob_dach.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
